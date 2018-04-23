@@ -1,7 +1,7 @@
 package cn.edu.jxnu.service.impl;
 
-import cn.edu.jxnu.dataobject.OrderDetail;
 import cn.edu.jxnu.dto.OrderDTO;
+import cn.edu.jxnu.entity.OrderDetail;
 import cn.edu.jxnu.enums.OrderStatusEnum;
 import cn.edu.jxnu.enums.PayStatusEnum;
 import cn.edu.jxnu.service.impl.OrderServiceImpl;

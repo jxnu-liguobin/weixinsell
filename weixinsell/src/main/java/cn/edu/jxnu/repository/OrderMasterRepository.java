@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import cn.edu.jxnu.dataobject.OrderMaster;
+import cn.edu.jxnu.entity.OrderMaster;
 
 /**
  * 订单

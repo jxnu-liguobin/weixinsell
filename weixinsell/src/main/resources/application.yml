@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://192.168.1.103/weixinsell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.1.106/weixinsell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
   jackson:
@@ -11,6 +11,7 @@ spring:
   redis:
     host: 192.168.1.104
     port: 6379
+#项目根路径
 server:
   context-path: /weixinsell
 #logging:
@@ -25,8 +26,8 @@ server:
 wechat:
   mpAppId: wx11959a5df106ac3a
   mpAppSecret: 47609bae088c91892f1f45f3675a30f8
-  openAppId: wx11959a5df106ac3a
-  openAppSecret: 47609bae088c91892f1f45f3675a30f8
+  openAppId: 需要公司资质，开放平台id
+  openAppSecret: 需要公司资质，开发平台密钥
   mchId: 1409146202
   mchKey: c976503d34ca432c601361f969fd8d85 
   keyPath: /var/weixin_cert/h5.p12
@@ -34,7 +35,7 @@ wechat:
   templateId:
     orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
 
-#微信公众号的项目前缀url[微信公众号授权,微信开发平台授权,前端代码域名]
+#微信公众号的项目前缀url[微信公众平台授权,微信开发平台授权,项目域名]
 projectUrl:
   wechatMpAuthorize: http://weixinsell.nat300.top
   wechatOpenAuthorize: http://weixinsell.nat300.top

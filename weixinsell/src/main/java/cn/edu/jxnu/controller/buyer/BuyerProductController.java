@@ -1,10 +1,10 @@
-package cn.edu.jxnu.controller;
+package cn.edu.jxnu.controller.buyer;
 
 import cn.edu.jxnu.VO.ProductInfoVO;
 import cn.edu.jxnu.VO.ProductVO;
 import cn.edu.jxnu.VO.ResultVO;
-import cn.edu.jxnu.dataobject.ProductCategory;
-import cn.edu.jxnu.dataobject.ProductInfo;
+import cn.edu.jxnu.entity.ProductCategory;
+import cn.edu.jxnu.entity.ProductInfo;
 import cn.edu.jxnu.service.CategoryService;
 import cn.edu.jxnu.service.ProductService;
 import cn.edu.jxnu.utils.ResultVOUtil;

@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import cn.edu.jxnu.dataobject.ProductCategory;
+import cn.edu.jxnu.entity.ProductCategory;
 import cn.edu.jxnu.repository.ProductCategoryRepository;
 
 import java.util.Arrays;

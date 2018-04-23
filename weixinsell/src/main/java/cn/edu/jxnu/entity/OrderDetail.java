@@ -1,4 +1,4 @@
-package cn.edu.jxnu.dataobject;
+package cn.edu.jxnu.entity;
 
 import java.math.BigDecimal;
 

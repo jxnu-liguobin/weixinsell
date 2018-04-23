@@ -1,7 +1,7 @@
 package cn.edu.jxnu.service;
 
-import cn.edu.jxnu.dataobject.ProductInfo;
 import cn.edu.jxnu.dto.CartDTO;
+import cn.edu.jxnu.entity.ProductInfo;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package cn.edu.jxnu.dataobject;
+package cn.edu.jxnu.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -42,7 +42,7 @@ public class ProductInfo {
 	/** 小图. */
 	private String productIcon;
 
-	/** 状态, 0(正常),1(下架). */
+	/** 状态, 0(正常),1(下架)，默认是上架状态. */
 	private Integer productStatus = ProductStatusEnum.UP.getCode();
 
 	/** 类目编号. */

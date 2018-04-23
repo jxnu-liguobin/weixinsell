@@ -2,7 +2,7 @@ package cn.edu.jxnu.service;
 
 import java.util.List;
 
-import cn.edu.jxnu.dataobject.ProductCategory;
+import cn.edu.jxnu.entity.ProductCategory;
 
 /**
  * 类目

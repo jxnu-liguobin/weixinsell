@@ -1,4 +1,4 @@
-package cn.edu.jxnu.dataobject;
+package cn.edu.jxnu.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;

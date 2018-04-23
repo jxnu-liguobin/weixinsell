@@ -1,4 +1,4 @@
-package cn.edu.jxnu.dataobject;
+package cn.edu.jxnu.entity;
 
 import lombok.Data;
 
@@ -24,6 +24,6 @@ public class SellerInfo {
 	/** 卖家密码. */
 	private String password;
 
-	/** 卖家开放平台id. */
+	/** 卖家开放平台openid. */
 	private String openid;
 }

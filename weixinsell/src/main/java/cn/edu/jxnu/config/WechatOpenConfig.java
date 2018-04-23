@@ -11,9 +11,13 @@ import org.springframework.stereotype.Component;
 /**
  * 微信开放平台配置
  * 
+ * 个人开发者无法测试这部分代码
+ * 
+ * 只有企业有权限使用的接口
+ * 
  * @author 梦境迷离.
  * @version V1.0
- * @time 2018年4月13日
+ * @time 2018年4月24日
  */
 @Component
 public class WechatOpenConfig {

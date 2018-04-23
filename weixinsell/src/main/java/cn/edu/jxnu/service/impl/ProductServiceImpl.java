@@ -1,7 +1,7 @@
 package cn.edu.jxnu.service.impl;
 
-import cn.edu.jxnu.dataobject.ProductInfo;
 import cn.edu.jxnu.dto.CartDTO;
+import cn.edu.jxnu.entity.ProductInfo;
 import cn.edu.jxnu.enums.ProductStatusEnum;
 import cn.edu.jxnu.enums.ResultEnum;
 import cn.edu.jxnu.exception.SellException;

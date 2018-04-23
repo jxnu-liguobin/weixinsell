@@ -2,7 +2,7 @@ package cn.edu.jxnu.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import cn.edu.jxnu.dataobject.SellerInfo;
+import cn.edu.jxnu.entity.SellerInfo;
 
 /**
  * 卖家

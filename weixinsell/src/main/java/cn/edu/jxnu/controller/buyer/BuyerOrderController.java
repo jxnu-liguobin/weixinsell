@@ -1,4 +1,4 @@
-package cn.edu.jxnu.controller;
+package cn.edu.jxnu.controller.buyer;
 
 import cn.edu.jxnu.VO.ResultVO;
 import cn.edu.jxnu.converter.OrderForm2OrderDTOConverter;

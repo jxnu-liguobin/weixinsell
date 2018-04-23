@@ -1,6 +1,6 @@
 package cn.edu.jxnu.service.impl;
 
-import cn.edu.jxnu.dataobject.SellerInfo;
+import cn.edu.jxnu.entity.SellerInfo;
 import cn.edu.jxnu.repository.SellerInfoRepository;
 import cn.edu.jxnu.service.SellerService;
 

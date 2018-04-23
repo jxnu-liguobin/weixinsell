@@ -1,7 +1,7 @@
 package cn.edu.jxnu.converter;
 
-import cn.edu.jxnu.dataobject.OrderMaster;
 import cn.edu.jxnu.dto.OrderDTO;
+import cn.edu.jxnu.entity.OrderMaster;
 
 import org.springframework.beans.BeanUtils;
 

@@ -1,6 +1,6 @@
 package cn.edu.jxnu.service.impl;
 
-import cn.edu.jxnu.dataobject.ProductCategory;
+import cn.edu.jxnu.entity.ProductCategory;
 import cn.edu.jxnu.repository.ProductCategoryRepository;
 import cn.edu.jxnu.service.CategoryService;
 

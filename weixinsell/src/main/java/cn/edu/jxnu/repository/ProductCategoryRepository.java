@@ -2,7 +2,7 @@ package cn.edu.jxnu.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import cn.edu.jxnu.dataobject.ProductCategory;
+import cn.edu.jxnu.entity.ProductCategory;
 
 import java.util.List;
 

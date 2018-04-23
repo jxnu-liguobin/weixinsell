@@ -5,30 +5,32 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 /**
- * Created by 廖师兄
- * 2017-07-23 17:20
+ * 商品修改，新增表单
+ * 
+ * @author 梦境迷离.
+ * @time 2018年4月24日
+ * @version v1.0
  */
 @Data
 public class ProductForm {
 
+	private String productId;
 
-    private String productId;
+	/** 名字. */
+	private String productName;
 
-    /** 名字. */
-    private String productName;
+	/** 单价. */
+	private BigDecimal productPrice;
 
-    /** 单价. */
-    private BigDecimal productPrice;
+	/** 库存. */
+	private Integer productStock;
 
-    /** 库存. */
-    private Integer productStock;
+	/** 描述. */
+	private String productDescription;
 
-    /** 描述. */
-    private String productDescription;
+	/** 小图. */
+	private String productIcon;
 
-    /** 小图. */
-    private String productIcon;
-
-    /** 类目编号. */
-    private Integer categoryType;
+	/** 类目编号. */
+	private Integer categoryType;
 }

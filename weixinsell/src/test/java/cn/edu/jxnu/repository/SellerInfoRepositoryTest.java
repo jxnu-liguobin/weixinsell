@@ -1,6 +1,6 @@
 package cn.edu.jxnu.repository;
 
-import cn.edu.jxnu.dataobject.SellerInfo;
+import cn.edu.jxnu.entity.SellerInfo;
 import cn.edu.jxnu.repository.SellerInfoRepository;
 import cn.edu.jxnu.utils.KeyUtil;
 

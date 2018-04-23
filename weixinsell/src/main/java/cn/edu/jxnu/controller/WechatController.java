@@ -40,8 +40,8 @@ public class WechatController {
 
 	/**
 	 * 
-	 * 第一步：请求CODE
-	 * 此方法实现请求授权
+	 * 第一步：请求CODE 此方法实现请求授权
+	 * 
 	 * @time 下午6:17:37
 	 * @version V1.0
 	 * @param returnUrl
@@ -61,8 +61,7 @@ public class WechatController {
 	}
 
 	/**
-	 * 第二步：通过code获取access_token
-	 * 用户允许授权后，将会重定向到redirect_uri的网址上，并且带上code和state参数
+	 * 第二步：通过code获取access_token 用户允许授权后，将会重定向到redirect_uri的网址上，并且带上code和state参数
 	 * authorize重定向到这个方法获取用户信息
 	 * 
 	 * @time 下午6:17:59
@@ -89,6 +88,19 @@ public class WechatController {
 		return "redirect:" + returnUrl + "?openid=" + openId;
 	}
 
+	/**
+	 * 开放平台验证请求
+	 * 
+	 * 二维码验证授权入口
+	 * 
+	 * 与authorize方法基本相同
+	 * 
+	 * @author 梦境迷离.
+	 * @time 2018年4月24日
+	 * @version v1.0
+	 * @param returnUrl
+	 * @return string 重定向地址
+	 */
 	@SuppressWarnings("deprecation")
 	@GetMapping("/qrAuthorize")
 	public String qrAuthorize(@RequestParam("returnUrl") String returnUrl) {
@@ -98,6 +110,20 @@ public class WechatController {
 		return "redirect:" + redirectUrl;
 	}
 
+	/**
+	 * 二维码验证授权
+	 * 
+	 * 获得openid
+	 * 
+	 * 与userInfo方法基本相同
+	 * 
+	 * @author 梦境迷离.
+	 * @time 2018年4月24日
+	 * @version v1.0
+	 * @param code
+	 * @param returnUrl
+	 * @return String 重定向地址
+	 */
 	@GetMapping("/qrUserInfo")
 	public String qrUserInfo(@RequestParam("code") String code, @RequestParam("state") String returnUrl) {
 		WxMpOAuth2AccessToken wxMpOAuth2AccessToken = new WxMpOAuth2AccessToken();

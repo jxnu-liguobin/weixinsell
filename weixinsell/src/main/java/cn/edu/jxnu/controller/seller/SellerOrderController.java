@@ -1,4 +1,4 @@
-package cn.edu.jxnu.controller;
+package cn.edu.jxnu.controller.seller;
 
 import cn.edu.jxnu.dto.OrderDTO;
 import cn.edu.jxnu.enums.ResultEnum;

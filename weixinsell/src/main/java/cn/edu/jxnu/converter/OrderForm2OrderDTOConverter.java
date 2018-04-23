@@ -3,8 +3,8 @@ package cn.edu.jxnu.converter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import cn.edu.jxnu.dataobject.OrderDetail;
 import cn.edu.jxnu.dto.OrderDTO;
+import cn.edu.jxnu.entity.OrderDetail;
 import cn.edu.jxnu.enums.ResultEnum;
 import cn.edu.jxnu.exception.SellException;
 import cn.edu.jxnu.form.OrderForm;

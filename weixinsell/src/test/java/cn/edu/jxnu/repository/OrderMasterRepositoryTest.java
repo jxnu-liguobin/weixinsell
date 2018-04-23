@@ -11,7 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import cn.edu.jxnu.dataobject.OrderMaster;
+import cn.edu.jxnu.entity.OrderMaster;
 import cn.edu.jxnu.repository.OrderMasterRepository;
 
 /**

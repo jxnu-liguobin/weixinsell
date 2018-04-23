@@ -7,7 +7,7 @@
     <#--边栏sidebar-->
     <#include "../common/nav.ftl">
 
-    <#--主要内容content-->
+    <#--主要内容content fluidS是流动布局-->
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="row clearfix">

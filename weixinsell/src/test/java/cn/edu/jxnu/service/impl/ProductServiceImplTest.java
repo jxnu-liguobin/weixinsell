@@ -1,6 +1,6 @@
 package cn.edu.jxnu.service.impl;
 
-import cn.edu.jxnu.dataobject.ProductInfo;
+import cn.edu.jxnu.entity.ProductInfo;
 import cn.edu.jxnu.enums.ProductStatusEnum;
 import cn.edu.jxnu.service.impl.ProductServiceImpl;
 

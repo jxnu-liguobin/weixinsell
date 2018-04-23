@@ -1,9 +1,9 @@
-package cn.edu.jxnu.controller;
+package cn.edu.jxnu.controller.seller;
 
 import cn.edu.jxnu.config.ProjectUrlConfig;
 import cn.edu.jxnu.constant.CookieConstant;
 import cn.edu.jxnu.constant.RedisConstant;
-import cn.edu.jxnu.dataobject.SellerInfo;
+import cn.edu.jxnu.entity.SellerInfo;
 import cn.edu.jxnu.enums.ResultEnum;
 import cn.edu.jxnu.service.SellerService;
 import cn.edu.jxnu.utils.CookieUtil;

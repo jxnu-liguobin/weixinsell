@@ -3,7 +3,7 @@ package cn.edu.jxnu.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import cn.edu.jxnu.dataobject.OrderDetail;
+import cn.edu.jxnu.entity.OrderDetail;
 import cn.edu.jxnu.enums.OrderStatusEnum;
 import cn.edu.jxnu.enums.PayStatusEnum;
 import cn.edu.jxnu.utils.EnumUtil;

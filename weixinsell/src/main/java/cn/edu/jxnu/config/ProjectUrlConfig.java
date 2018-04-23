@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * 微信公众平台url前缀配置
+ * 微信平台url前缀配置
  * 
  * @author 梦境迷离.
  * @version V1.0

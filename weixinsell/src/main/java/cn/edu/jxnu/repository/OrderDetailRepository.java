@@ -2,7 +2,7 @@ package cn.edu.jxnu.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import cn.edu.jxnu.dataobject.OrderDetail;
+import cn.edu.jxnu.entity.OrderDetail;
 
 import java.util.List;
 

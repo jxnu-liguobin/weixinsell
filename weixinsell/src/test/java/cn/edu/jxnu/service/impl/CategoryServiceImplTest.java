@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import cn.edu.jxnu.dataobject.ProductCategory;
+import cn.edu.jxnu.entity.ProductCategory;
 import cn.edu.jxnu.service.impl.CategoryServiceImpl;
 
 import java.util.Arrays;

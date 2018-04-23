@@ -1,6 +1,6 @@
 <html>
 <#include "../common/header.ftl">
-
+<#--新增或修改页面-->
 <body>
 <div id="wrapper" class="toggled">
 
@@ -12,7 +12,7 @@
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-md-12 column">
-                    <form role="form" method="post" action="/sell/seller/product/save">
+                    <form role="form" method="post" action="/weixinsell/seller/product/save">
                         <div class="form-group">
                             <label>名称</label>
                             <input name="productName" type="text" class="form-control" value="${(productInfo.productName)!''}"/>
@@ -39,6 +39,7 @@
                             <select name="categoryType" class="form-control">
                                 <#list categoryList as category>
                                     <option value="${category.categoryType}"
+                                    <#-- 选中状态 -->
                                             <#if (productInfo.categoryType)?? && productInfo.categoryType == category.categoryType>
                                                 selected
                                             </#if>
@@ -47,6 +48,7 @@
                                 </#list>
                             </select>
                         </div>
+                          <#-- 隐藏字段，商品id -->
                         <input hidden type="text" name="productId" value="${(productInfo.productId)!''}">
                         <button type="submit" class="btn btn-default">提交</button>
                     </form>
