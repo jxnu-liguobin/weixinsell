@@ -42,8 +42,8 @@ public class SellerAuthorizeAspect {
 	 * @time 2018年4月24日
 	 * @version v1.0
 	 */
-	@Pointcut("execution(public * cn.edu.jxnu.controller.Seller*.*(..))"
-			+ "&& !execution(public * cn.edu.jxnu.controller.SellerUserController.*(..))")
+	@Pointcut("execution(public * cn.edu.jxnu.controller.seller.Seller*.*(..))"
+			+ "&& !execution(public * cn.edu.jxnu.controller.seller.SellerUserController.*(..))")
 	public void verify() {
 	}
 

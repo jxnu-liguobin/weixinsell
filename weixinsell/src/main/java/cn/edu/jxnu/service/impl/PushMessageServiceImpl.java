@@ -17,9 +17,12 @@ import java.util.List;
 /**
  * 推送消息
  * 
+ * 
+ * 每个订单更新的地方都可以调用这个服务，发送模板消息
+ * 
  * @author 梦境迷离.
  * @version V1.0
- * @time 2018年4月13日
+ * @time 2018年4月24日
  */
 @Service
 @Slf4j

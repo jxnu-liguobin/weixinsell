@@ -110,7 +110,7 @@ public class OrderServiceImpl implements OrderService {
 				// 使用lambda的map映射，生成一个购物车数据传输对象的list(实际前台只是传来了商品的id和数量)
 				.map(e -> new CartDTO(e.getProductId(), e.getProductQuantity())).collect(Collectors.toList());
 		productService.decreaseStock(cartDTOList);
-		// 发送websocket消息
+		// 发送websocket消息，用户下单触发
 		webSocket.sendMessage(orderDTO.getOrderId());
 
 		return orderDTO;

@@ -13,6 +13,8 @@ import java.util.concurrent.CopyOnWriteArraySet;
 /**
  * WebSocket
  * 
+ * 服务端
+ * 
  * @author 梦境迷离.
  * @version V1.0
  * @time 2018年4月13日
@@ -22,8 +24,14 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Slf4j
 public class WebSocket {
 
+	/**
+	 * session
+	 */
 	private Session session;
 
+	/**
+	 * 定义容器 存储session
+	 */
 	private static CopyOnWriteArraySet<WebSocket> webSocketSet = new CopyOnWriteArraySet<>();
 
 	@OnOpen

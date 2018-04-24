@@ -16,6 +16,10 @@ import javax.persistence.Id;
 @Entity
 public class SellerInfo {
 
+	/**
+	 * 一定要和数据库的名字对应sellerId->sell_id
+	 */
+
 	@Id
 	private String sellerId;
 	/** 卖家用户名. */

@@ -33,7 +33,7 @@ wechat:
   keyPath: /var/weixin_cert/h5.p12
   notifyUrl: http://weixinsell.nat300.top/weixinsell/pay/notify
   templateId:
-    orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
+    orderStatus: 3wdYrGyWvLK1tnjO7i1NP9OV_aLMHEJPw6rbBP5YL8k
 
 #微信公众号的项目前缀url[微信公众平台授权,微信开发平台授权,项目域名]
 projectUrl:
