@@ -1,6 +1,7 @@
 package cn.edu.jxnu.exception;
 
 import cn.edu.jxnu.enums.ResultEnum;
+import lombok.Getter;
 
 /**
  * 异常
@@ -10,6 +11,7 @@ import cn.edu.jxnu.enums.ResultEnum;
  * @time 2018-4-13
  */
 @SuppressWarnings("unused")
+@Getter
 public class SellException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
