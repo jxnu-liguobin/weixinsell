@@ -53,8 +53,7 @@ public class RedisLock {
 			/** 获取上一个锁【旧值】的时间，getAndSet类似i++ ,先获取，再设置. */
 			String oldValue = redisTemplate.opsForValue().getAndSet(key, value); // 返回一个字符串，也就是键的旧值。
 			/**
-			 * 如果键不存在，则返回null。如果键存在，得到的oldValue不是空，使用旧值与currentValue比较，不相同，则说明已经被其他线程修改过
-			 * .
+			 * 如果键不存在，则返回null。如果键存在，得到的oldValue不是空，使用旧值与currentValue比较，不相同，则说明已经被其他线程修改过.
 			 */
 			if (!StringUtils.isEmpty(oldValue) && oldValue.equals(currentValue)) {
 				/** 说明没有被其他线程修改，加锁成功. */

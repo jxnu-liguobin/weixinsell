@@ -10,7 +10,6 @@ import lombok.Getter;
  * @version V1.0
  * @time 2018-4-13
  */
-@SuppressWarnings("unused")
 @Getter
 public class SellException extends RuntimeException {
 
