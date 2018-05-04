@@ -58,14 +58,7 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	private WebSocket webSocket;
 
-	/**
-	 * 创建订单
-	 *
-	 * @time 下午1:36:58
-	 * @version V1.0
-	 * @param orderDTO
-	 * @return 订单数据传输对象
-	 */
+	// 创建订单
 	@Override
 	@Transactional // 开启事务
 	public OrderDTO create(OrderDTO orderDTO) {
@@ -116,14 +109,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDTO;
 	}
 
-	/**
-	 * 根据订单id,查找并返回订单数据传输对象
-	 *
-	 * @time 下午1:37:14
-	 * @version V1.0
-	 * @param orderId
-	 * @return 订单数据传输对象
-	 */
+	// 根据订单id,查找并返回订单数据传输对象
 	@Override
 	public OrderDTO findOne(String orderId) {
 
@@ -145,16 +131,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDTO;
 	}
 
-	/**
-	 * 根据买家openid和分页参数，查询订单数据传输对象并返回list集合
-	 *
-	 * @time 下午1:37:47
-	 * 
-	 * @version V1.0
-	 * @param buyerOpenid
-	 * @param pageable
-	 * @return list集合
-	 */
+	// 根据买家openid和分页参数，查询订单数据传输对象并返回list集合
 	@Override
 	public Page<OrderDTO> findList(String buyerOpenid, Pageable pageable) {
 		Page<OrderMaster> orderMasterPage = orderMasterRepository.findByBuyerOpenid(buyerOpenid, pageable);
@@ -165,14 +142,7 @@ public class OrderServiceImpl implements OrderService {
 		return new PageImpl<OrderDTO>(orderDTOList, pageable, orderMasterPage.getTotalElements());
 	}
 
-	/**
-	 * 取消订单
-	 *
-	 * @time 下午1:39:04
-	 * @version V1.0
-	 * @param orderDTO
-	 * @return orderDTO订单数据传输对象
-	 */
+	// 取消订单
 	@Override
 	@Transactional
 	public OrderDTO cancel(OrderDTO orderDTO) {
@@ -210,14 +180,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDTO;
 	}
 
-	/**
-	 * 完成订单
-	 *
-	 * @time 下午1:39:39
-	 * @version V1.0
-	 * @param orderDTO
-	 * @return OrderDTO
-	 */
+	// 完成订单
 	@Override
 	@Transactional
 	public OrderDTO finish(OrderDTO orderDTO) {
@@ -243,14 +206,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDTO;
 	}
 
-	/**
-	 * 支付订单
-	 *
-	 * @time 下午1:39:49
-	 * @version V1.0
-	 * @param orderDTO
-	 * @return OrderDTO
-	 */
+	// 支付订单
 	@Override
 	@Transactional
 	public OrderDTO paid(OrderDTO orderDTO) {
@@ -279,14 +235,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderDTO;
 	}
 
-	/**
-	 * 分页查询所有并返回订单数据传输对象 卖家后端管理系统使用
-	 * 
-	 * @time 下午1:39:57
-	 * @version V1.0
-	 * @param pageable
-	 * @return list集合
-	 */
+	// 分页查询所有并返回订单数据传输对象 卖家后端管理系统使用
 	@Override
 	public Page<OrderDTO> findList(Pageable pageable) {
 		Page<OrderMaster> orderMasterPage = orderMasterRepository.findAll(pageable);

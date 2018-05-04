@@ -23,29 +23,13 @@ public class BuyerServiceImpl implements BuyerService {
 	@Autowired
 	private OrderService orderService;
 
-	/**
-	 * 查询订单
-	 *
-	 * @time 下午3:21:01
-	 * @version V1.0
-	 * @param openid
-	 * @param orderId
-	 * @return OrderDTO
-	 */
+	// 查询订单
 	@Override
 	public OrderDTO findOrderOne(String openid, String orderId) {
 		return checkOrderOwner(openid, orderId);
 	}
 
-	/**
-	 * 取消订单
-	 *
-	 * @time 下午3:20:50
-	 * @version V1.0
-	 * @param openid
-	 * @param orderId
-	 * @return OrderDTO
-	 */
+	// 取消订单
 	@Override
 	public OrderDTO cancelOrder(String openid, String orderId) {
 		OrderDTO orderDTO = checkOrderOwner(openid, orderId);
@@ -56,15 +40,7 @@ public class BuyerServiceImpl implements BuyerService {
 		return orderService.cancel(orderDTO);
 	}
 
-	/**
-	 * 检查订单归属人
-	 *
-	 * @time 下午3:20:27
-	 * @version V1.0
-	 * @param openid
-	 * @param orderId
-	 * @return 订单
-	 */
+	// 检查订单归属人
 	private OrderDTO checkOrderOwner(String openid, String orderId) {
 		OrderDTO orderDTO = orderService.findOne(orderId);
 		// 查询订单是这个人的
