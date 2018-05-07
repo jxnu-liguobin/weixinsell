@@ -3,6 +3,7 @@ package cn.edu.jxnu.VO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -13,7 +14,12 @@ import java.util.List;
  * @time 2018年4月16日
  */
 @Data
-public class ProductVO {
+public class ProductVO implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6050055980406503338L;
 
 	/** 商品名 . */
 	@JsonProperty("name")

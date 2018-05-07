@@ -1,15 +1,13 @@
 package cn.edu.jxnu.controller.seller;
 
-import cn.edu.jxnu.entity.ProductCategory;
-import cn.edu.jxnu.entity.ProductInfo;
-import cn.edu.jxnu.exception.SellException;
-import cn.edu.jxnu.form.ProductForm;
-import cn.edu.jxnu.service.CategoryService;
-import cn.edu.jxnu.service.ProductService;
-import cn.edu.jxnu.utils.KeyUtil;
+import java.util.List;
+import java.util.Map;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -21,9 +19,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.validation.Valid;
-import java.util.List;
-import java.util.Map;
+import cn.edu.jxnu.entity.ProductCategory;
+import cn.edu.jxnu.entity.ProductInfo;
+import cn.edu.jxnu.exception.SellException;
+import cn.edu.jxnu.form.ProductForm;
+import cn.edu.jxnu.service.CategoryService;
+import cn.edu.jxnu.service.ProductService;
+import cn.edu.jxnu.utils.KeyUtil;
 
 /**
  * 卖家端商品
@@ -141,6 +143,8 @@ public class SellerProductController {
 	 * @return ModelAndView
 	 */
 	@PostMapping("/save")
+	// @CachePut(cacheNames="product",key="#form.getProductId()")//更新
+	@CacheEvict(cacheNames = "product", key = "#form.getProductId()") // 驱除缓存
 	public ModelAndView save(@Valid ProductForm form, BindingResult bindingResult, Map<String, Object> map) {
 		if (bindingResult.hasErrors()) {
 			map.put("msg", bindingResult.getFieldError().getDefaultMessage());

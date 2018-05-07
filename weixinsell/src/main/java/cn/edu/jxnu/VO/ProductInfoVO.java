@@ -3,6 +3,7 @@ package cn.edu.jxnu.VO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -13,7 +14,13 @@ import java.math.BigDecimal;
  * @time 2018年4月13日
  */
 @Data
-public class ProductInfoVO {
+public class ProductInfoVO implements Serializable{
+	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2833350220853094597L;
 
 	/** 指定返回的json对象的属性. */
 	@JsonProperty("id")

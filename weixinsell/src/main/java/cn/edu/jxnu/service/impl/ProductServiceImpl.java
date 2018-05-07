@@ -1,12 +1,6 @@
 package cn.edu.jxnu.service.impl;
 
-import cn.edu.jxnu.dto.CartDTO;
-import cn.edu.jxnu.entity.ProductInfo;
-import cn.edu.jxnu.enums.ProductStatusEnum;
-import cn.edu.jxnu.enums.ResultEnum;
-import cn.edu.jxnu.exception.SellException;
-import cn.edu.jxnu.repository.ProductInfoRepository;
-import cn.edu.jxnu.service.ProductService;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,7 +8,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import cn.edu.jxnu.dto.CartDTO;
+import cn.edu.jxnu.entity.ProductInfo;
+import cn.edu.jxnu.enums.ProductStatusEnum;
+import cn.edu.jxnu.enums.ResultEnum;
+import cn.edu.jxnu.exception.SellException;
+import cn.edu.jxnu.repository.ProductInfoRepository;
+import cn.edu.jxnu.service.ProductService;
 
 /**
  * 商品
@@ -29,6 +29,8 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductInfoRepository repository;
 
+	// 使用CachePut更新，必须返回值必须一样，key不可省略，省略则使用默认的方法参数作为key,导致key不同
+	// @Cacheable(cacheNames = "product", key = "#productId")
 	@Override
 	public ProductInfo findOne(String productId) {
 		return repository.findOne(productId);
@@ -44,6 +46,7 @@ public class ProductServiceImpl implements ProductService {
 		return repository.findAll(pageable);
 	}
 
+	// @CachePut(cacheNames = "product", key = "#productInfo.getProductId()")
 	@Override
 	public ProductInfo save(ProductInfo productInfo) {
 		return repository.save(productInfo);
