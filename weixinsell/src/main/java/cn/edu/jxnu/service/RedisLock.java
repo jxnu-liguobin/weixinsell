@@ -8,6 +8,9 @@ import org.springframework.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 
+ * 对特价商品的秒杀接口进行加锁 key=商品id,value=当前时间+超时时间
+ * 
  * @author 梦境迷离.
  * @time 2018年4月25日
  * @version v1.0
@@ -77,7 +80,7 @@ public class RedisLock {
 		try {
 			String currentValue = redisTemplate.opsForValue().get(key);
 			if (!StringUtils.isEmpty(currentValue) && currentValue.equals(value)) {
-
+				redisTemplate.opsForValue().getOperations().delete(key);
 			}
 		} catch (Exception e) {
 			log.error("redis分布式锁，解锁失败");
